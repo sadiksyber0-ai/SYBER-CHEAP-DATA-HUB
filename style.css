@@ -1,0 +1,16 @@
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
+body{background:#f5f7fb;color:#111}
+header{display:flex;justify-content:space-between;padding:16px;max-width:1100px;margin:auto}
+.logo{font-weight:900;font-size:20px}
+.logo span{color:#0a84ff}
+.hero{text-align:center;padding:30px 15px}
+.hero h1{font-size:32px;font-weight:900}
+.bundles{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:14px;max-width:1100px;margin:20px auto;padding:0 15px}
+.card{background:white;border-radius:16px;padding:16px;box-shadow:0 4px 12px rgba(0,0,0,.06)}
+.card .net{background:#e6f0ff;color:#0a84ff;font-size:11px;padding:4px 8px;border-radius:20px}
+.card h3{font-size:26px;margin-top:10px;font-weight:900}
+.card p{font-size:13px;color:#666}
+.price{font-weight:900;margin-top:10px;font-size:18px}
+.buy{width:100%;margin-top:12px;background:#000;color:#fff;padding:12px;border-radius:12px;border:none;font-weight:700}
+.order-box{max-width:420px;margin:30px auto;background:white;padding:20px;border-radius:20px}
+input{width:100%;padding:14px;border:1px solid #ddd;border-radius:12px;margin-top:12px}
