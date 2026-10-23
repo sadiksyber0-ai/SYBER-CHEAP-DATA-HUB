@@ -1,275 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>SYBER MART - Data & Airtime</title>
-
-    <link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SYBER CHEAP DATA</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
-
 <body>
-
-    <!-- HEADER -->
-    <header class="header">
-
-        <div class="logo">
-            <span>SYBER</span> MART
-        </div>
-
-        <div class="header-actions">
-            <button id="loginBtn" class="login-btn">
-                Login
-            </button>
-
-            <button id="menuBtn" class="menu-btn">
-                ☰
-            </button>
-        </div>
-
-    </header>
-
-
-    <!-- HERO -->
-    <section class="hero">
-
-        <div class="hero-content">
-
-            <p class="hero-small">
-                FAST • SECURE • RELIABLE
-            </p>
-
-            <h1>
-                Buy Data & Airtime
-                <br>
-                <span>Instantly</span>
-            </h1>
-
-            <p class="hero-text">
-                Get affordable data bundles and airtime
-                from your favourite networks.
-            </p>
-
-            <button class="hero-btn" onclick="scrollToBundles()">
-                Buy Data
-            </button>
-
-        </div>
-
-    </section>
-
-
-    <!-- NETWORKS -->
-    <section class="section">
-
-        <div class="section-title">
-            <h2>Choose Your Network</h2>
-
-            <p>
-                Select a network to view available bundles.
-            </p>
-        </div>
-
-
-        <div class="network-grid">
-
-            <button class="network-card mtn" onclick="selectNetwork('MTN')">
-                <div class="network-logo">
-                    MTN
-                </div>
-
-                <h3>MTN</h3>
-
-                <p>Data Bundles</p>
-            </button>
-
-
-            <button class="network-card telecel" onclick="selectNetwork('Telecel')">
-                <div class="network-logo">
-                    Telecel
-                </div>
-
-                <h3>Telecel</h3>
-
-                <p>Data Bundles</p>
-            </button>
-
-
-            <button class="network-card airteltigo" onclick="selectNetwork('AirtelTigo')">
-                <div class="network-logo">
-                    AT
-                </div>
-
-                <h3>AirtelTigo</h3>
-
-                <p>Data Bundles</p>
-            </button>
-
-        </div>
-
-    </section>
-
-
-    <!-- DATA BUNDLES -->
-    <section class="section bundles-section" id="bundles">
-
-        <div class="section-title">
-
-            <h2>Popular Data Bundles</h2>
-
-            <p id="selectedNetwork">
-                Choose a network above
-            </p>
-
-        </div>
-
-
-        <div id="bundleContainer" class="bundle-grid">
-
-            <!-- Bundles are loaded by JavaScript -->
-
-        </div>
-
-    </section>
-
-
-    <!-- HOW IT WORKS -->
-    <section class="how-section">
-
-        <div class="section-title">
-
-            <h2>How It Works</h2>
-
-            <p>
-                Buying data is simple.
-            </p>
-
-        </div>
-
-
-        <div class="steps">
-
-            <div class="step">
-
-                <div class="step-number">
-                    1
-                </div>
-
-                <h3>Choose Network</h3>
-
-                <p>
-                    Select MTN, Telecel or AirtelTigo.
-                </p>
-
-            </div>
-
-
-            <div class="step">
-
-                <div class="step-number">
-                    2
-                </div>
-
-                <h3>Select Bundle</h3>
-
-                <p>
-                    Choose the data bundle you want.
-                </p>
-
-            </div>
-
-
-            <div class="step">
-
-                <div class="step-number">
-                    3
-                </div>
-
-                <h3>Make Payment</h3>
-
-                <p>
-                    Pay securely using available payment methods.
-                </p>
-
-            </div>
-
-
-            <div class="step">
-
-                <div class="step-number">
-                    4
-                </div>
-
-                <h3>Receive Data</h3>
-
-                <p>
-                    Your data is delivered to the recipient.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- FOOTER -->
-    <footer class="footer">
-
-        <div class="logo">
-            <span>SYBER</span> MART
-        </div>
-
-        <p>
-            © 2026 SYBER MART. All rights reserved.
-        </p>
-
-    </footer>
-
-
-    <!-- LOGIN MODAL -->
-    <div id="loginModal" class="modal">
-
-        <div class="modal-box">
-
-            <button class="close-btn" onclick="closeLogin()">
-                ×
-            </button>
-
-            <h2>Welcome Back</h2>
-
-            <p>
-                Login to your SYBER MART account.
-            </p>
-
-            <input
-                type="email"
-                id="email"
-                placeholder="Email address"
-            >
-
-            <input
-                type="password"
-                id="password"
-                placeholder="Password"
-            >
-
-            <button class="submit-btn">
-                Login
-            </button>
-
-            <p class="signup-text">
-                Don't have an account?
-                <a href="#">Create one</a>
-            </p>
-
-        </div>
-
-    </div>
-
-
-    <script src="app.js"></script>
-
+<header>
+ <div class="logo">SYBER <span>CHEAP DATA</span></div>
+ <a href="admin.html" style="background:#000;color:#fff;padding:8px 14px;border-radius:20px;text-decoration:none;font-size:13px">Admin</a>
+</header>
+
+<div class="hero">
+ <h1>Ghana's Cheapest Data</h1>
+ <p>MTN • Telecel • AirtelTigo - Instant Delivery 24/7</p>
+</div>
+
+<div id="bundles" class="bundles">Loading bundles...</div>
+
+<!-- Order Modal -->
+<div id="orderModal" class="order-box" style="display:none">
+ <h2 id="orderTitle"></h2>
+ <p id="orderPrice"></p>
+ <p style="background:#fff7cc;padding:10px;border-radius:10px;margin-top:10px;font-size:13px">Send MoMo to: <b>024 XXXXXXX - SYBER CHEAP DATA</b></p>
+ <input id="custPhone" placeholder="Your Number e.g 0241234567">
+ <input id="momoRef" placeholder="MoMo Transaction ID">
+ <button class="buy" onclick="submitOrder()">I Have Paid - Submit</button>
+ <button onclick="closeModal()" style="width:100%;margin-top:10px;padding:10px;border:none;background:#eee;border-radius:12px">Cancel</button>
+</div>
+
+<script src="Supabase.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
